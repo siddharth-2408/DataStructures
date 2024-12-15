@@ -11,10 +11,10 @@ package algolution.set1;
  */
 public class ArrayMaximumElement 
 {
-    public static int maxElement(int[] arr)
+    public static int maxElement(int[] arr,int start,int end)
     {
         int max=arr[0];
-        for(int i=1;i<arr.length;i++)
+        for(int i=start;i<end;i++)
         {
             max = Math.max(max, arr[i]);
         }
@@ -23,6 +23,6 @@ public class ArrayMaximumElement
     public static void main(String[] args) 
     {
         int[] arr = {10,-2,-1,0,3,-5};
-        System.out.println("Total Count of Negative Numbers are:- "+maxElement(arr));
+        System.out.println(maxElement(arr,0,arr.length));
     }
 }
